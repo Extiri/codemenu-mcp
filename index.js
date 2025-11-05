@@ -48,7 +48,11 @@ async function makeCodeMenuRequest(endpoint, method = 'GET', body = null) {
     
     return await response.text();
   } catch (error) {
-    throw new Error(`Failed to connect to CodeMenu API: ${error.message}`);
+    // Preserve original error for better debugging
+    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+      throw new Error(`Network error connecting to CodeMenu API at ${url}: ${error.message}`);
+    }
+    throw error;
   }
 }
 
@@ -278,6 +282,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         if (language) body.language = language;
         if (description) body.description = description;
         if (category) body.category = category;
+
+        // Validate that at least one field is provided for update
+        if (Object.keys(body).length === 0) {
+          throw new Error('At least one field must be provided to update the snippet');
+        }
 
         const result = await makeCodeMenuRequest(`/snippets/${id}`, 'PUT', body);
         return {
