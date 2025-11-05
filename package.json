@@ -1,0 +1,29 @@
+{
+  "name": "codemenu-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for CodeMenu snippet manager.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "codemenu-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "codemenu",
+    "snippets",
+    "code-manager"
+  ],
+  "author": "Extiri",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

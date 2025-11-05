@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "codemenu": {
+      "command": "node",
+      "args": ["/absolute/path/to/codemenu-mcp/index.js"],
+      "env": {
+        "CODEMENU_API_URL": "https://api.codemenu.io/v1",
+        "CODEMENU_API_KEY": "your-api-key-here"
+      }
+    }
+  }
+}
