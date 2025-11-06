@@ -165,14 +165,6 @@ The server implements the Model Context Protocol and exposes tools that correspo
 
 For detailed information about the CodeMenu API, refer to the [CodeMenu API documentation](https://docs.extiri.com/CodeMenuAPI).
 
-## Token Usage Optimization
-
-The `list_snippets` tool intentionally excludes the full code content from results to reduce token usage. This allows you to:
-
-1. Browse through many snippets efficiently
-2. Use `get_snippet` only when you need the actual code content
-3. Reduce costs when working with LLM APIs
-
 ## Requirements
 
 - Node.js >= 18.0.0
