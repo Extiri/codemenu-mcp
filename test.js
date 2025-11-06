@@ -42,6 +42,8 @@ rl.on('line', (line) => {
     
     if (responseCount >= expectedResponses) {
       console.log('\n✓ All tests passed!');
+      console.log('\nNote: This test only validates MCP protocol communication.');
+      console.log('To test actual API calls, ensure CodeMenu is running with API enabled.');
       server.kill();
       process.exit(0);
     }
