@@ -36,7 +36,7 @@ The CodeMenu API runs locally at `http://127.0.0.1:1300/v1` by default.
 ### From npm (when published)
 
 ```bash
-npm install -g codemenu-mcp
+npm install -g git+https://github.com/Extiri/codemenu-mcp.git
 ```
 
 ### From source
