@@ -17,13 +17,13 @@ The server exposes the following tools for interacting with CodeMenu:
 
 ## Prerequisites
 
-- **CodeMenu** must be running on your system
+- **CodeMenu** must be running on your Mac ([Learn more](https://extiri.com/codemenu))
 - **API must be enabled** in CodeMenu settings (CodeMenu → Settings → API)
 - Node.js >= 18.0.0
 
 ## CodeMenu API Setup
 
-1. Open CodeMenu application
+1. Open CodeMenu
 2. Go to Settings → API
 3. Enable the API server
 4. Note the port (default: 1300)
