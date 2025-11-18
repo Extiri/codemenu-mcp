@@ -17,7 +17,7 @@ The server exposes the following tools for interacting with CodeMenu:
 
 ## Prerequisites
 
-- **CodeMenu** application must be running on your system
+- **CodeMenu** must be running on your system
 - **API must be enabled** in CodeMenu settings (CodeMenu → Settings → API)
 - Node.js >= 18.0.0
 
@@ -55,7 +55,7 @@ The server connects to the local CodeMenu API and supports the following environ
 ### Environment Variables
 
 - `CODEMENU_API_URL` - The base URL for the CodeMenu API (default: `http://127.0.0.1:1300/v1`)
-- `CODEMENU_API_KEY` - Your CodeMenu API key if you enabled key protection in settings (optional)
+- `CODEMENU_API_KEY` - Your CodeMenu API key
 
 ### Example Configuration for Claude Desktop
 
@@ -73,7 +73,7 @@ Add this to your Claude Desktop configuration file:
       "args": ["/path/to/codemenu-mcp/index.js"],
       "env": {
         "CODEMENU_API_URL": "http://127.0.0.1:1300/v1",
-        "CODEMENU_API_KEY": "your-api-key-if-enabled"
+        "CODEMENU_API_KEY": "your-api-key"
       }
     }
   }
@@ -88,7 +88,7 @@ Or if installed globally via npm:
     "codemenu": {
       "command": "codemenu-mcp",
       "env": {
-        "CODEMENU_API_KEY": "your-api-key-if-enabled"
+        "CODEMENU_API_KEY": "your-api-key"
       }
     }
   }
@@ -200,5 +200,4 @@ For issues related to:
 - Try listing without filters first
 
 **Authentication errors:**
-- If you enabled API key protection in CodeMenu, set the `CODEMENU_API_KEY` environment variable
-- If you didn't enable it, make sure the environment variable is not set or is empty
+- Check if the `CODEMENU_API_KEY` environment variable is set properly
